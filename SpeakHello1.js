@@ -1,17 +1,12 @@
-// STEP 2: Wrap the entire content inside an IIFE
 (function (window) {
-  
-  // STEP 3: Create an object called 'helloSpeaker'
   var helloSpeaker = {};
-
-  // STEP 4: Attach the 'speak' method to the 'helloSpeaker' object
   var speakWord = "Hello";
 
   helloSpeaker.speak = function (name) {
-    console.log(speakWord + " " + name);
+    var message = speakWord + " " + name;
+    console.log(message);
+    document.write(message + "<br>");
   };
 
-  // STEP 5: Expose the 'helloSpeaker' object to the global scope
   window.helloSpeaker = helloSpeaker;
-
 })(window);
